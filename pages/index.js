@@ -1,6 +1,6 @@
 import Container from '../components/container'
 import Image from 'next/image'
-
+ 
 function HomePage() {
   return (
     <>
@@ -27,8 +27,13 @@ function HomePage() {
           height={1280 / 2}
         />
       </div>
-    </>
+    </> 
   )
 }
 
 export default HomePage
+
+
+
+
+
