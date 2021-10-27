@@ -1,10 +1,13 @@
 import 'tailwindcss/tailwind.css'
 import Head from 'next/head'
-import Header from '../components/header'
 import { Auth0Provider } from '@auth0/auth0-react'
 
 export default function MyApp({ Component, pageProps }) {
-  return (
+
+  const getLayout = Component.getLayout || ((page) => page)
+
+  return getLayout(
+
     <Auth0Provider
       clientId={process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID}
       domain={process.env.NEXT_PUBLIC_AUTH0_DOMAIN}
@@ -14,11 +17,10 @@ export default function MyApp({ Component, pageProps }) {
         <title>Carlos Gatti :: DNA</title>
       </Head>
 
-      <Header />
-
       <main className="py-14">
         <Component {...pageProps} />
       </main>
+
     </Auth0Provider>
   )
 }

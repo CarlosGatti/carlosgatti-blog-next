@@ -1,20 +1,19 @@
 import Link from 'next/link'
 import Container from '../../components/container'
 import distanceToNow from '../../lib/dateRelative'
-import { getAllPosts } from '../../lib/getPost'
 
 export default function NotePage({ allPosts }) {
   return (
     <Container>
       {allPosts.length ? (
         allPosts.map((post) => (
-          <article key={post.slug} className="mb-10">
-            <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-              <a className="text-lg leading-6 font-bold">{post.title}</a>
+          <article key={post.Id} className="mb-10">
+            <Link as={`/posts/${post.Id}`} href="/posts/[slug]">
+              <a className="text-lg leading-6 font-bold">{post.Title}</a>
             </Link>
-            <p>{post.excerpt}</p>
+            <p>{post.Text}</p>
             <div className="text-gray-400">
-              <time>{distanceToNow(new Date(post.date))}</time>
+              <time>{distanceToNow(new Date(post.Date))}</time>
             </div>
           </article>
         ))
@@ -26,9 +25,15 @@ export default function NotePage({ allPosts }) {
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts(['slug', 'title', 'excerpt', 'date'])
-
+  const res = await fetch(`http://localhost:3001/api/allposts/`)
+  const allPosts = await res.json()
+  console.log(allPosts)
+  if (!allPosts) {
+    return {
+      notFound: true,
+    }
+  }
   return {
-    props: { allPosts },
+    props: { allPosts }, // will be passed to the page component as props
   }
 }

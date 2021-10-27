@@ -3,44 +3,35 @@ import ErrorPage from 'next/error'
 import Comment from '../../components/comment'
 import Container from '../../components/container'
 import distanceToNow from '../../lib/dateRelative'
-import { getAllPosts, getPostBySlug } from '../../lib/getPost'
-import markdownToHtml from '../../lib/markdownToHtml'
 import Head from 'next/head'
 
-export default function PostPage({ post }) {
+export default function PostPage( props ) {
   const router = useRouter()
-
-  if (!router.isFallback && !post?.slug) {
+  
+  if (!router.isFallback && !props.post[0]?.Id) {
     return <ErrorPage statusCode={404} />
   }
 
   return (
     <Container>
       <Head>
-        <title>{post.title} | Carlos Gatti :: Blog</title>
+        <title>{props.post.Title} | Carlos Gatti :: Blog</title>
       </Head>
-
       {router.isFallback ? (
         <div>Loading…</div>
       ) : (
         <div>
           <article>
             <header>
-              <h1 className="text-4xl font-bold">{post.title}</h1>
-              {post.excerpt ? (
-                <p className="mt-2 text-xl">{post.excerpt}</p>
+              <h1 className="text-4xl font-bold">{props.post[0].Title}</h1>
+              {props.post[0].Text ? (
+                <p className="mt-2 text-xl">{props.post[0].Text}</p>
               ) : null}
               <time className="flex mt-2 text-gray-400">
-                {distanceToNow(new Date(post.date))}
+              <time>{distanceToNow(new Date(props.post[0].Date))}</time>
               </time>
             </header>
-
-            <div
-              className="prose mt-10"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
           </article>
-
           <Comment />
         </div>
       )}
@@ -48,37 +39,18 @@ export default function PostPage({ post }) {
   )
 }
 
-export async function getStaticProps({ params }) {
-  const post = getPostBySlug(params.slug, [
-    'slug',
-    'title',
-    'excerpt',
-    'date',
-    'content',
-  ])
-  const content = await markdownToHtml(post.content || '')
-
+export async function getServerSideProps(context){
+  const slug  = context.query.slug;
+  const res = await fetch(`http://localhost:3001/api/post/`+ slug)
+  const post = await res.json()
+  if (!post) {
+    return {
+      notFound: true, 
+    }
+  }
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      post
     },
-  }
-}
-
-export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
-
-  return {
-    paths: posts.map(({ slug }) => {
-      return {
-        params: {
-          slug,
-        },
-      }
-    }),
-    fallback: false,
   }
 }

@@ -12,6 +12,16 @@ function Header() {
           <Link href="/posts">
             <a>Posts</a>
           </Link>
+
+          <Link href="/pocs/post2.mobile">
+            <a>Poc1</a>
+          </Link>
+
+          <Link href="/pocs/home">
+            <a>home</a>
+          </Link>
+
+
         </nav>
       </Container>
     </header>
