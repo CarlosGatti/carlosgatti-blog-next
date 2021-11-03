@@ -1,5 +1,5 @@
 function Container({ children }) {
-  return <div className="container max-w-2xl m-auto px-4">{children}</div>
+  return <div className="container max-w-1xl m-auto px-2">{children}</div>
 }
 
 export default Container
