@@ -118,7 +118,7 @@ export async function getStaticProps(context) {
 export async function getStaticPaths() {  
   // Call an external API endpoint to get posts
   const response = await fetch(process.env.API);
-  const res = await fetch(response.url + 'api/allslugs')
+  const res = await fetch(response.url + '/api/allslugs')
   const posts = await res.json()
  
   // Get the paths we want to pre-render based on posts
