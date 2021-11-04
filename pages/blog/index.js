@@ -109,7 +109,7 @@ const NewsCard = ({ data }) => {
 
 export async function getStaticProps() {
   const response = await fetch(process.env.API);
-  const res = await fetch(response.url + '/api/latestposts/')
+  const res = await fetch(response.url + 'api/latestposts/')
   console.log(res)
 
   const latestPosts = await res.json()

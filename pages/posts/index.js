@@ -43,7 +43,12 @@ export default function NotePage({ allPosts }) {
 
 export async function getStaticProps() {
   const response = await fetch(process.env.API);
-  const res = await fetch(response.url + '/api/allposts/')
+
+
+  console.log(response);
+
+
+  const res = await fetch(response.url + 'api/allposts/')
   const allPosts = await res.json()
   console.log(allPosts)
   if (!allPosts) {
