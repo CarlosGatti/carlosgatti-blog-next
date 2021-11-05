@@ -2,7 +2,7 @@ import Container from '../components/container'
 import Image from 'next/image'
 import Layout from '../components/layouts/layout'
 
-function HomePage({ latestPosts }) {
+function HomePage() {
   return (
     <>
     <Layout>

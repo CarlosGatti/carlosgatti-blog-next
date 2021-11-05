@@ -1,7 +1,9 @@
 import Container from '../../components/container'
-import Image from 'next/image'
+
 import Layout from '../../components/layouts/layout'
 import distanceToNow from '../../lib/dateRelative'
+
+import Banner from '../../components/banner-image'
 
 import {
 
@@ -47,6 +49,7 @@ function Blog({ latestPosts }) {
     <Layout>
 
       <Container>
+        <Banner></Banner>
         <div  className="my-6">
           <h1 className="text-2xl font-bold">Últimas publicações do blog:</h1>
         </div>
