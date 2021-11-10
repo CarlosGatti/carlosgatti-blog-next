@@ -2,8 +2,10 @@ import {
   IoLogoInstagram,
   IoLogoLinkedin,
   IoLogoYoutube,
-  IoLogoGithub 
+  IoLogoGithub
   } from "react-icons/io5";
+
+  import { FaSpotify } from 'react-icons/fa';
 
 export default function Footer() {
 
@@ -114,16 +116,16 @@ export default function Footer() {
                 mb-3
               "
             >
-              Mining Crypto
+              Others
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800"
-                  >RIG </a>
+                <a href="https://www.amazon.com/hz/wishlist/ls/31NF3CK7UHQKG" className="text-gray-600 hover:text-gray-800"
+                  >Amazon - Material RIG</a>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800"
-                  >Amazon - Material</a>
+                <a href="https://calendly.com/eduardo-gf/30min" className="text-gray-600 hover:text-gray-800"
+                  >Calendly</a>
               </li>
             </nav>
           </div>
@@ -142,11 +144,11 @@ export default function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800"
+                <a href="https://github.com/CarlosGatti?tab=repositories" className="text-gray-600 hover:text-gray-800"
                   >Repositores</a>
               </li>
               <li>
-                <a href="" className="text-gray-600 hover:text-gray-800"
+                <a href="https://github.com/CarlosGatti/python-finance" className="text-gray-600 hover:text-gray-800"
                   >Python Finance</a>
               </li>
             </nav>
@@ -181,17 +183,17 @@ export default function Footer() {
               sm:justify-start
             "
           >
-            <a href="" className="ml-3 text-gray-500">
+            <a href="https://github.com/CarlosGatti" className="ml-3 text-gray-500">
               <IoLogoGithub  className="ml-3 text-gray-500"/>
             </a>    
-            <a href="" className="ml-3 text-gray-500">
+            <a href="https://www.linkedin.com/in/carlos-gatti-693b909b/" className="ml-3 text-gray-500">
               <IoLogoLinkedin  className="ml-3 text-gray-500"/>
             </a>
-            <a href="" className="ml-3 text-gray-500">
-              <IoLogoYoutube  className="ml-3 text-gray-500"/>
-            </a>
-            <a href="" className="ml-3 text-gray-500">
+            <a href="https://www.instagram.com/carloseduardogatti/" className="ml-3 text-gray-500">
               <IoLogoInstagram  className="ml-3 text-gray-500"/>
+            </a>
+            <a href="https://open.spotify.com/playlist/5PQmPiJihgnN7GvhUZ7i3z?si=e0db925808564a2b" className="ml-3 text-gray-500">
+              <FaSpotify  className="ml-3 text-gray-500"/>
             </a>
           </span>
         </div>
