@@ -1,8 +1,6 @@
 import Container from '../../components/container'
-
-import Layout from '../../components/layouts/layout'
+import Layout from '../../components/layouts/blog-layout'
 import distanceToNow from '../../lib/dateRelative'
-
 import Banner from '../../components/banner-image'
 
 import {
@@ -47,7 +45,6 @@ function Blog({ latestPosts }) {
   return (
     <>
     <Layout>
-
       <Container>
         <Banner></Banner>
         <div  className="my-6">
@@ -60,9 +57,7 @@ function Blog({ latestPosts }) {
                   </div>
                 ))}
           </section>  
-
      </Container>
-
     </Layout>
     </> 
   )

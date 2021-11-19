@@ -1,37 +1,39 @@
-import Container from '../components/container'
-import Image from 'next/image'
 import Layout from '../components/layouts/layout'
+import styles from '../styles/Home.module.css'
 
 function HomePage() {
   return (
     <>
     <Layout>
-      <Container>
-        <div className="space-y-6">
-          <h1 className="text-2xl font-bold">
-            I am a full stack developer with a passion for building and designing creative, responsive, web applications and tecnology. 
-          </h1>
-          <p>
-            Here I will gather information about all these subjects, and I intend to entice you to learn more about me and my projects at the moment.
-          </p>
-
-          <p>Consider taking a few minutes to watch, read, and get involved.</p>
-
-          <p>My name is <code><b>Carlos Gatti</b></code> and I'm happy to have you here, and now you just have to choose where you want to start.</p>
-        </div>
-      </Container>
-
-      <Container>
-        <div className="max-w-4xl m-auto px-4 mt-20">
-          <Image
-            src="/desk.jpg"
-            alt="my desk"
-            width={1920 / 2}
-            height={1280 / 2}
-          />
-        </div>
-      </Container>
-
+      <div className={styles.container}>
+          <main className={styles.main}>
+              <img src="/gatti-foto.png" alt="gatti-foto" className={styles.gatti} />
+              <h1 className={styles.title}>
+                  Carlos Gatti
+              </h1>
+              <p className={styles.description}>
+                  Here you can learn a little more about me.
+              </p>
+              <div className={styles.grid}>
+                  <a href="https://www.linkedin.com/in/carlos-gatti-693b909b/" className={styles.card}>
+                      <h3>Experiance</h3>
+                      <p>If you are a recruiter, I have something especially reserved for you.</p>
+                  </a>
+                  <a href="/blog/" className={styles.card}>
+                      <h3>My Blog</h3>
+                      <p>This blog was developed with the aim of structuring some themes that I routinely need to share.</p>
+                  </a>
+                  <a href="https://github.com/carlosgatti/" className={styles.card}>
+                      <h3>GitHub</h3>
+                      <p>Some of the repositories that I participated or created.</p>
+                  </a>
+                  <a href="https://www.amazon.com/hz/wishlist/ls/2TLSRSMJK0O6M?ref_=wl_share" className={styles.card}>
+                      <h3>Amazon</h3>
+                      <p>My personal references for books, courses and products.</p>
+                  </a>
+              </div>
+          </main>
+      </div>
     </Layout>
     </> 
   )
