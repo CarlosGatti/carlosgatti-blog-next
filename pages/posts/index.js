@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Container from '../../components/container'
 import distanceToNow from '../../lib/dateRelative'
 import Layout from '../../components/layouts/layout'
+import Image from 'next/image'
+
 
 export default function NotePage({ allPosts }) {
   return (
@@ -16,7 +18,7 @@ export default function NotePage({ allPosts }) {
                     <div className="md:flex">
                       <div className="md:flex-shrink-0">
 
-                      <img className="h-48 w-full object-cover md:h-full md:w-48" src={'/post-img/' + post.Img}/>
+                        <Image className="h-48 w-full object-cover md:h-full md:w-48" src={'/post-img/' + post.Img} width={250} height={250}/> 
       
                       </div>
                       <div className="p-8">
