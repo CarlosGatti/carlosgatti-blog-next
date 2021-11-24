@@ -10,18 +10,30 @@ export default function NotePage({ allPosts }) {
         {allPosts.length ? (
           allPosts.map((post) => (
             <div className="max-w-5xl m-auto flex flex-col mt-5" key={post.Id} >
-              <div className="font-sans flex flex-row items-center px-8 py-3 rounded-lg border border-gray-300 bg-gray-200">
+     
+                <Link as={`/posts/${post.Id}`} href="/posts/[slug]">   
+                  <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl">
+                    <div className="md:flex">
+                      <div className="md:flex-shrink-0">
 
-                <div className="flex-1 overflow-hidden">
-                  <Link as={`/posts/${post.Id}`} href="/posts/[slug]">   
-                    <h1 className="text-3xl font-semibold text-gray-500 cursor-pointer text-gray-400 hover:text-blue-500">{post.Id} - {post.Title}</h1>
-                  </Link>
-                  <div className="text-xs text-gray-400 truncate mt-2">
-                    <span className="font-semibold">{post.Email}</span> | <time>{distanceToNow(new Date(post.Date))}</time>
+                      <img className="h-48 w-full object-cover md:h-full md:w-48" src={'/post-img/' + post.Img}/>
+      
+                      </div>
+                      <div className="p-8">
+                        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{post.Theme}</div>
+                        <a href="#" className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">{post.Id} - {post.Title}</a>
+
+
+                        <div className="text-xs text-gray-400 truncate mt-2">
+                          
+                        <span className="font-semibold">{post.Email}</span> | <time>{distanceToNow(new Date(post.Date))}</time>
+                        </div>
+
+                        <p className="mt-2 text-gray-500">{post.Text}</p>
+                      </div>
+                    </div>
                   </div>
-                  <p className="mt-4 text-gray-700">{post.Text}</p>
-                </div>
-              </div>
+                </Link>
             </div>
           ))
         ) : (
