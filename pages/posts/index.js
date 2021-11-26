@@ -18,8 +18,7 @@ export default function NotePage({ allPosts }) {
                     <div className="md:flex">
                       <div className="md:flex-shrink-0">
 
-                        <Image className="h-48 w-full object-cover md:h-full md:w-48" src={'/post-img/' + post.Img} width={250} height={250}/> 
-      
+                  
                       </div>
                       <div className="p-8">
                         <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{post.Theme}</div>
