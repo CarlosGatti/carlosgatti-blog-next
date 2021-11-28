@@ -1,22 +1,23 @@
-import Container from '../../components/container'
+
 import Layout from '../../components/layouts/blog-layout'
-import Image from 'next/image'
+import styles from '../../styles/Home.module.css'
 import NewsCard from '../../components/news-card'
 
 export default function NotePage({ allPosts }) {
   return (
     <Layout>
-      <Container>
-        {allPosts.length ? (
-          allPosts.map((post) => (
-            <div className="max-w-5xl m-auto flex flex-col mt-5" key={post.Id} >
-                 <NewsCard data={post} />
-            </div>
-          ))
-        ) : (
-          <p>No blog posted yet :/</p>
-        )}
-      </Container>
+      <div className={styles.container}>
+        <div  className="my-6">
+          <h1 className="text-2xl font-bold">List of everything:</h1>
+        </div>
+          <section>
+                {allPosts.map((item) => (
+                  <div key={item.Id}>
+                    <NewsCard data={item} />
+                  </div>
+                ))}
+          </section>  
+        </div>
     </Layout>
   )
 }

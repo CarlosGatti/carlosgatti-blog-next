@@ -9,7 +9,7 @@ function Blog({ latestPosts }) {
     <Layout>
       <div className={styles.container}>
         <div  className="my-6">
-          <h1 className="text-2xl font-bold">Últimas publicações do blog:</h1>
+          <h1 className="text-2xl font-bold">Last things:</h1>
         </div>
           <section>
                 {latestPosts.map((item) => (
