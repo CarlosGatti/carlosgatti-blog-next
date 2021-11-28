@@ -120,6 +120,7 @@ export default function Footer() {
               mx-auto
               py-4
               px-5
+              justify-center
               flex flex-wrap flex-col
               sm:flex-row
             "
@@ -141,17 +142,17 @@ export default function Footer() {
                 sm:justify-start
               "
             >
-              <a href="https://github.com/CarlosGatti" className="ml-3 text-gray-500">
-                <IoLogoGithub  className="ml-3 text-gray-500"/>
+              <a href="https://github.com/CarlosGatti" className="ml-4 text-gray-500">
+                <IoLogoGithub  className="ml-4 text-gray-500"/>
               </a>    
-              <a href="https://www.linkedin.com/in/carlos-gatti-693b909b/" className="ml-3 text-gray-500">
-                <IoLogoLinkedin  className="ml-3 text-gray-500"/>
+              <a href="https://www.linkedin.com/in/carlos-gatti-693b909b/" className="ml-4 text-gray-500">
+                <IoLogoLinkedin  className="ml-4 text-gray-500"/>
               </a>
-              <a href="https://www.instagram.com/carloseduardogatti/" className="ml-3 text-gray-500">
-                <IoLogoInstagram  className="ml-3 text-gray-500"/>
+              <a href="https://www.instagram.com/carloseduardogatti/" className="ml-4 text-gray-500">
+                <IoLogoInstagram  className="ml-4 text-gray-500"/>
               </a>
-              <a href="https://open.spotify.com/playlist/5PQmPiJihgnN7GvhUZ7i3z?si=e0db925808564a2b" className="ml-3 text-gray-500">
-                <FaSpotify  className="ml-3 text-gray-500"/>
+              <a href="https://open.spotify.com/playlist/5PQmPiJihgnN7GvhUZ7i3z?si=e0db925808564a2b" className="ml-4 text-gray-500">
+                <FaSpotify  className="ml-4 text-gray-500"/>
               </a>
             </span>
           </div>
