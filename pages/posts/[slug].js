@@ -3,7 +3,6 @@ import Link from "next/link"
 import { MdMonetizationOn } from "react-icons/md"
 import ErrorPage from 'next/error'
 import Comment from '../../components/comment'
-import Container from '../../components/container'
 import distanceToNow from '../../lib/dateRelative'
 import Head from 'next/head'
 import { IoChatbox } from "react-icons/io5"
@@ -16,7 +15,6 @@ import {
   FiPlay,
 } from "react-icons/fi";
 
-
 export default function PostPage( { post } ) {
   const router = useRouter()
 
@@ -26,12 +24,7 @@ export default function PostPage( { post } ) {
 
   return (
     <Layout>
-
       <div className={styles.container}>
-
-
-
-
         <Head>
           <title>{post[0].Title} | Carlos Gatti :: Blog</title>
         </Head>
@@ -59,12 +52,9 @@ export default function PostPage( { post } ) {
                   <div className="text-xs text-gray-400 truncate">
                     <span className="font-semibold">{post[0].Email}</span> | <time>{distanceToNow(new Date(post[0].Date))}</time>
                   </div>
-
                   <div className="text-container py-6" dangerouslySetInnerHTML={{ __html: post[0].Text }} />
-
                 </div>
               </div>
-
 
               <div className="player bg-gray-50 p-6 flex flex-col items-center rounded-md">
                 <div className="flex justify-center items-center h-24">
@@ -90,7 +80,6 @@ export default function PostPage( { post } ) {
                   </div>
                 </div>
               </div>
-
               <hr className="mt-8 mb-8 border-t-2 border-gray-200 border-dotted ml-14" />
               <div className="flex items-center mt-2 text-xs font-semibold text-gray-700 ml-14">
                 <IoChatbox className="w-4 h-4 mr-1 text-yellow-400" /> Comentar
@@ -99,9 +88,7 @@ export default function PostPage( { post } ) {
             </div>
         </div>
         )}
-
       </div>
-
     </Layout>    
   )
 }
