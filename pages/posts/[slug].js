@@ -1,14 +1,14 @@
 import { useRouter } from 'next/router'
-import Link from "next/link";
-import { MdMonetizationOn } from "react-icons/md";
+import Link from "next/link"
+import { MdMonetizationOn } from "react-icons/md"
 import ErrorPage from 'next/error'
 import Comment from '../../components/comment'
 import Container from '../../components/container'
 import distanceToNow from '../../lib/dateRelative'
 import Head from 'next/head'
-import { IoChatbox } from "react-icons/io5";
+import { IoChatbox } from "react-icons/io5"
 import Layout from '../../components/layouts/layout'
-
+import styles from '../../styles/Home.module.css'
 
 import {
   FiSkipForward,
@@ -26,7 +26,11 @@ export default function PostPage( { post } ) {
 
   return (
     <Layout>
-      <Container>
+
+      <div className={styles.container}>
+
+
+
 
         <Head>
           <title>{post[0].Title} | Carlos Gatti :: Blog</title>
@@ -56,9 +60,8 @@ export default function PostPage( { post } ) {
                     <span className="font-semibold">{post[0].Email}</span> | <time>{distanceToNow(new Date(post[0].Date))}</time>
                   </div>
 
-                  <p className="mt-4 text-gray-700">
-                    {post[0].Text}
-                  </p>
+                  <div className="text-container py-6" dangerouslySetInnerHTML={{ __html: post[0].Text }} />
+
                 </div>
               </div>
 
@@ -96,7 +99,9 @@ export default function PostPage( { post } ) {
             </div>
         </div>
         )}
-      </Container>
+
+      </div>
+
     </Layout>    
   )
 }
