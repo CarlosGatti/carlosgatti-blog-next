@@ -1,7 +1,6 @@
 import {  
   IoLogoInstagram,
   IoLogoLinkedin,
-  IoLogoYoutube,
   IoLogoGithub
   } from "react-icons/io5";
 import styles from '../styles/Home.module.css'
@@ -75,13 +74,14 @@ export default function Footer() {
                 The Blog
               </h2>
               <nav className="list-none mb-10">
-                <li>
-                  <a href="" className="text-gray-600 hover:text-gray-800"
-                    >Posts</a>
+
+              <li>
+                  <a href="/blog" className="text-gray-600 hover:text-gray-800"
+                    >About</a>
                 </li>
                 <li>
-                  <a href="" className="text-gray-600 hover:text-gray-800"
-                    >About</a>
+                  <a href="/posts" className="text-gray-600 hover:text-gray-800"
+                    >Posts</a>
                 </li>
               </nav>
             </div>
