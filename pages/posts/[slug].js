@@ -6,13 +6,14 @@ import Comment from '../../components/comment'
 import distanceToNow from '../../lib/dateRelative'
 import Head from 'next/head'
 import { IoChatbox } from "react-icons/io5"
-import Layout from '../../components/layouts/layout'
+import Layout from '../../components/layouts/blog-layout'
 import styles from '../../styles/Home.module.css'
 
 
 import {
   FiPlay,
-  FiStopCircle
+  FiStopCircle, 
+  FiPauseCircle
 } from "react-icons/fi";
 
 
@@ -68,6 +69,17 @@ export default function PostPage( { post } ) {
     var synth = window.speechSynthesis;
     synth.cancel();
   };
+
+  const speechPause = () => {
+    var synth = window.speechSynthesis;
+    synth.pause();
+    var amIPaused = synth.paused; 
+
+    if(amIPaused == true){
+      synth.speak();
+    }
+
+  };
   
   return (
     <Layout>
@@ -118,6 +130,9 @@ export default function PostPage( { post } ) {
                     </button>
                     <button className="bg-purple-500 rounded-full p-3 hover:bg-purple-600" onClick={(e) => speechStart(post[0].Text)}>
                       <FiPlay size={22} color="#fff" />
+                    </button>
+                    <button className="rounded-full p-3 hover:bg-warmGray-200" onClick={(e) => speechPause()}>
+                      <FiPauseCircle size={22} />
                     </button>
                   </div>
                 </div>
