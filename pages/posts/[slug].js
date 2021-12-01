@@ -9,11 +9,12 @@ import { IoChatbox } from "react-icons/io5"
 import Layout from '../../components/layouts/layout'
 import styles from '../../styles/Home.module.css'
 
+
 import {
-  FiSkipForward,
-  FiSkipBack,
   FiPlay,
+  FiStopCircle
 } from "react-icons/fi";
+
 
 export default function PostPage( { post } ) {
   const router = useRouter()
@@ -22,6 +23,49 @@ export default function PostPage( { post } ) {
     return <ErrorPage statusCode={404} />
   }
 
+//speak post
+  const speechStart = (post) => {
+    const lang = 'en-US'
+    const voiceIndex = 2
+    console.log(post)
+    
+    const speak = async text => {
+      if (!speechSynthesis) {
+        return
+      }
+      const message = new SpeechSynthesisUtterance(text)
+      message.voice = await chooseVoice()
+      speechSynthesis.speak(message)
+    }
+    
+    const getVoices = () => {
+      return new Promise(resolve => {
+        let voices = speechSynthesis.getVoices()
+        if (voices.length) {
+          resolve(voices)
+          return
+        }
+        speechSynthesis.onvoiceschanged = () => {
+          voices = speechSynthesis.getVoices()
+          resolve(voices)
+        }
+      })
+    }
+    
+    const chooseVoice = async () => {
+      const voices = (await getVoices()).filter(voice => voice.lang == lang)   
+      return new Promise(resolve => {
+        resolve(voices[voiceIndex])
+      })
+    }
+    speak(post)
+  };
+
+  const speechCancel = () => {
+    var synth = window.speechSynthesis;
+    synth.cancel();
+  };
+  
   return (
     <Layout>
       <div className={styles.container}>
@@ -55,27 +99,22 @@ export default function PostPage( { post } ) {
                   <div className="text-container py-6" dangerouslySetInnerHTML={{ __html: post[0].Text }} />
                 </div>
               </div>
-
               <div className="player bg-gray-50 p-6 flex flex-col items-center rounded-md">
                 <div className="flex justify-center items-center h-24">
                   <h3 className="text-xl font-bold text-center">
                     {post[0].Title}
                   </h3>
                 </div>
-
                 <div className="mt-6">
                   <div className="w-full h-2 bg-gray-200 rounded-md mb-4">
                     <div className="w-3/5 h-2 bg-purple-600 rounded-md mb-4" />
                   </div>
                   <div className="flex gap-4">
-                    <button className="rounded-full p-3 hover:bg-warmGray-200">
-                      <FiSkipBack size={22} />
+                    <button className="rounded-full p-3 hover:bg-warmGray-200" onClick={(e) => speechCancel()}>
+                      <FiStopCircle size={22} />
                     </button>
-                    <button className="bg-purple-500 rounded-full p-3 hover:bg-purple-600">
+                    <button className="bg-purple-500 rounded-full p-3 hover:bg-purple-600" onClick={(e) => speechStart(post[0].Text)}>
                       <FiPlay size={22} color="#fff" />
-                    </button>
-                    <button className="rounded-full p-3 hover:bg-warmGray-200">
-                      <FiSkipForward size={22} />
                     </button>
                   </div>
                 </div>
