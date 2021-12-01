@@ -58,7 +58,10 @@ export default function PostPage( { post } ) {
         resolve(voices[voiceIndex])
       })
     }
-    speak(post)
+    //revert html
+    var temp = document.createElement('div');
+    temp.innerHTML = post;
+    speak(temp.textContent)
   };
 
   const speechCancel = () => {
