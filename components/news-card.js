@@ -34,7 +34,6 @@ function TabCoinIcon(props) {
       </svg>
     );
   }
-
 export default function NewsCard({data}) {
     return (
       <div className={styles.cardpost}>

@@ -3,9 +3,6 @@ import cn from 'classnames'
 import Image from 'next/image'
 
 export default function CoverImage() {
-
-
-
   return (
     <div className="sm:mx-0">
         <Image
@@ -18,8 +15,5 @@ export default function CoverImage() {
           })}
       />
     </div>
-
-
-          
   )
 }
