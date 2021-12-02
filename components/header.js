@@ -7,7 +7,7 @@ function Header() {
   const router = useRouter();
 
   const menu = [
-    //{ title: 'Home', path: '/' },
+    { title: 'Home', path: '/' },
     { title: '.Blog', path: '/blog/'}
   ]
   
@@ -21,20 +21,18 @@ function Header() {
           {menu.map((item, index) => {
             return (
               <Link key={index} href={item.path}>
-                <a
-                  className={`cursor-pointer ${
-                    router.pathname === item.path
-                      ? 'text-gray-500'
-                      : 'hover:text-gray-500' 
-                  }`}
+                <button className={`class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white cursor-pointer`}
                 >
-                  {item.title}
-                </a>
+                 {item.title}
+                </button>
               </Link>
             )
           })}
         </nav>
       </div>
+
+
+
   </header>
   )
 }
