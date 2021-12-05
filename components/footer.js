@@ -128,7 +128,7 @@ export default function Footer() {
             <p className="text-gray-500 text-sm text-center sm:text-left">
               © 2021 Copyright:
               <a
-                href="https://www.tailwind-elements.com/"
+                href="https://www.carlosgatti.com/"
                 className="text-gray-600 ml-1"
                 target="_blank"
                 >Carlos Gatti</a>
