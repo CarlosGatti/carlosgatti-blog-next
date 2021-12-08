@@ -16,7 +16,7 @@ function HomePage() {
               </p>
               <div className={styles.grid}>
                   <a href="https://www.linkedin.com/in/carlos-gatti-693b909b/" className={styles.card}>
-                      <h3>Experiance</h3>
+                      <h3 animate-ping>Experiance</h3>
                       <p>If you are a recruiter, I have something especially reserved for you.</p>
                   </a>
                   <a href="/blog/" className={styles.card}>
