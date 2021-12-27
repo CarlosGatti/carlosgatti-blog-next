@@ -1,5 +1,6 @@
 import Layout from '../components/layouts/layout'
 import styles from '../styles/Home.module.css'
+import ThemeToggle from '../components/theme-toogle'
 
 function HomePage() {
   return (
@@ -14,6 +15,7 @@ function HomePage() {
               <p className={styles.description}>
                   Here you can learn a little more about me.
               </p>
+              <ThemeToggle/>
               <div className={styles.grid}>
                   <a href="https://www.linkedin.com/in/carlos-gatti-693b909b/" className={styles.card}>
                       <h3 animate-ping>Experiance</h3>

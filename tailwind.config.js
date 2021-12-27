@@ -1,5 +1,6 @@
 module.exports = {
   mode: 'jit',
+  darkMode: 'class',
   purge: ['./pages/**/*.js', './components/**/*.js'],
   variants: {
     extend: {
