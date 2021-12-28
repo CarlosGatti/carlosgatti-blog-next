@@ -15,7 +15,9 @@ function HomePage() {
               <p className={styles.description}>
                   Here you can learn a little more about me.
               </p>
-              <ThemeToggle/>
+              <div className='animate-pulse flex space-x-4'>
+                <ThemeToggle/>
+              </div>
               <div className={styles.grid}>
                   <a href="https://www.linkedin.com/in/carlos-gatti-693b909b/" className={styles.card}>
                       <h3 animate-ping>Experiance</h3>
