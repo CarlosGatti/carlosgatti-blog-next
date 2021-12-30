@@ -2,13 +2,19 @@ import { useRouter } from 'next/router'
 import Link from "next/link"
 import { MdMonetizationOn } from "react-icons/md"
 import ErrorPage from 'next/error'
-import Comment from '../../components/comment'
+//import Comment from '../../components/comment'
 import distanceToNow from '../../lib/dateRelative'
 import Head from 'next/head'
 import { IoChatbox } from "react-icons/io5"
 import Layout from '../../components/layouts/blog-layout'
 import styles from '../../styles/Home.module.css'
+import markdownToHtml from '../../lib/markdownToHtml'
+import PostBody from '../../components/post-body'
+import Header from '../../components/header-blog'
 
+import Container from '../../components/container'
+import PostHeader from '../../components/post-header'
+import PostTitle from '../../components/post-title'
 
 import {
   FiPlay,
@@ -17,7 +23,7 @@ import {
 } from "react-icons/fi";
 
 
-export default function PostPage( { post } ) {
+export default function PostPage( { post, content } ) {
   const router = useRouter()
 
   if (!router.isFallback && !post) {
@@ -83,69 +89,68 @@ export default function PostPage( { post } ) {
   
   return (
     <Layout>
-      <div className={styles.container}>
-        <Head>
-          <title>{post[0].Title} | Carlos Gatti :: Blog</title>
-        </Head>
+      <Container>
+        {/* <div className={styles.container}> */}
 
-        {router.isFallback ? (
-          <div>Loading…</div>
-        ) : (
-          <div>
-            <div className="max-w-4xl m-auto">
-              <div className="flex font-sans">
-                <Link href="#">
-                  <a className="flex flex-col items-center self-start mt-1 mr-2 ">
-                    <div className="w-12 pt-1 pb-1 text-sm font-bold text-center border border-gray-300 rounded-lg rounded-b-none">
-                      <MdMonetizationOn className="inline-block w-4 h-4 text-yellow-400 " />
+          <Header/>
+          {router.isFallback ? (
+            <PostTitle>Loading…</PostTitle>
+          ) : (
+
+            <div>
+              <article className="mb-32">
+   
+                <PostHeader
+                  title={post[0].Title}
+                  coverImage={post[0].Img}
+                  date={post[0].Date}
+                  author={post[0].Email}
+                />
+                <PostBody content={content} />
+              </article>
+        
+
+              <div className="max-w-4xl m-auto">
+       
+                <div className="player bg-gray-50 p-6 flex flex-col items-center rounded-md">
+                  <div className="flex justify-center items-center h-24">
+                    <h3 className="text-xl font-bold text-center">
+                      {post[0].Title}
+                    </h3>
+                  </div>
+                  <div className="mt-6">
+                    <div className="w-full h-2 bg-gray-200 rounded-md mb-4">
+                      <div className="w-3/5 h-2 bg-purple-600 rounded-md mb-4" />
                     </div>
-                    <div className="w-full pb-1 text-xs text-center pt-0.5 rounded-lg rounded-t-none bg-gray-300 text-gray-700">
-                      {post[0].Id}
+                    <div className="flex gap-4">
+                      <button className="rounded-full p-3 hover:bg-warmGray-200" onClick={(e) => speechCancel()}>
+                        <FiStopCircle size={22} />
+                      </button>
+                      <button className="bg-purple-500 rounded-full p-3 hover:bg-purple-600" onClick={(e) => speechStart(post[0].Text)}>
+                        <FiPlay size={22} color="#fff" />
+                      </button>
+                      <button className="rounded-full p-3 hover:bg-warmGray-200" onClick={(e) => speechPause()}>
+                        <FiPauseCircle size={22} />
+                      </button>
                     </div>
-                  </a>
-                </Link>
-                <div className="flex-1 overflow-hidden">
-                  <h1 className="text-3xl font-semibold text-gray-900">
-                    {post[0].Title}
-                  </h1>
-                  <div className="text-xs text-gray-400 truncate">
-                    <span className="font-semibold">{post[0].Email}</span> | <time>{distanceToNow(new Date(post[0].Date))}</time>
-                  </div>
-                  <div className="text-container py-6" dangerouslySetInnerHTML={{ __html: post[0].Text }} />
-                </div>
-              </div>
-              <div className="player bg-gray-50 p-6 flex flex-col items-center rounded-md">
-                <div className="flex justify-center items-center h-24">
-                  <h3 className="text-xl font-bold text-center">
-                    {post[0].Title}
-                  </h3>
-                </div>
-                <div className="mt-6">
-                  <div className="w-full h-2 bg-gray-200 rounded-md mb-4">
-                    <div className="w-3/5 h-2 bg-purple-600 rounded-md mb-4" />
-                  </div>
-                  <div className="flex gap-4">
-                    <button className="rounded-full p-3 hover:bg-warmGray-200" onClick={(e) => speechCancel()}>
-                      <FiStopCircle size={22} />
-                    </button>
-                    <button className="bg-purple-500 rounded-full p-3 hover:bg-purple-600" onClick={(e) => speechStart(post[0].Text)}>
-                      <FiPlay size={22} color="#fff" />
-                    </button>
-                    <button className="rounded-full p-3 hover:bg-warmGray-200" onClick={(e) => speechPause()}>
-                      <FiPauseCircle size={22} />
-                    </button>
                   </div>
                 </div>
+                <hr className="mt-8 mb-8 border-t-2 border-gray-200 border-dotted ml-14" />
+                <div className="flex items-center mt-2 text-xs font-semibold text-gray-700 ml-14">
+                  <IoChatbox className="w-4 h-4 mr-1 text-yellow-400" /> Comentar
+                </div>
+                {/* <Comment /> */}
               </div>
-              <hr className="mt-8 mb-8 border-t-2 border-gray-200 border-dotted ml-14" />
-              <div className="flex items-center mt-2 text-xs font-semibold text-gray-700 ml-14">
-                <IoChatbox className="w-4 h-4 mr-1 text-yellow-400" /> Comentar
-              </div>
-              <Comment />
-            </div>
-        </div>
-        )}
-      </div>
+          </div>
+
+          
+          )}
+        {/* </div> */}
+
+
+
+
+      </Container>
     </Layout>    
   )
 }
@@ -160,8 +165,14 @@ export async function getStaticProps(context) {
   const res = await fetch(response.url + 'api/post/' + id)
   const post = await res.json()
 
+  const content = await markdownToHtml(post[0].Text || '')
   // Pass post data to the page via props
-  return { props: { post } }
+
+  console.log("Mark", content)
+  return { 
+    props: { post,
+             content
+            } }
 }
 
 export async function getStaticPaths() {  
@@ -177,3 +188,4 @@ export async function getStaticPaths() {
 
   return { paths, fallback: false }
 }
+

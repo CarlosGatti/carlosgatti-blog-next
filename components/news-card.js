@@ -3,6 +3,7 @@ import distanceToNow from '../lib/dateRelative'
 import { FiMessageSquare } from "react-icons/fi"
 import styles from '../styles/Home.module.css'
 
+
 function TabCoinIcon(props) {
     return (
       <svg
@@ -35,6 +36,7 @@ function TabCoinIcon(props) {
     );
   }
 export default function NewsCard({data}) {
+
     return (
       <div className={styles.cardpost}>
         <div className="flex p-4 rounded-md mb-4">
@@ -43,7 +45,11 @@ export default function NewsCard({data}) {
                 <Link as={`/posts/${data.Id}`} href="/posts/[slug]">   
                     <h3 className="font-bold text-xl cursor-pointer">{data.Id} - {data.Title}</h3>
                 </Link>
+
+
                 <div className="text-gray-600 text-sm mt-1" dangerouslySetInnerHTML={{ __html: data.Text }} />
+
+
             </div>
             <footer className="flex items-center mt-4">
                 <time className="text-sm">{distanceToNow(new Date(data.Date))}</time>
@@ -62,7 +68,7 @@ export default function NewsCard({data}) {
             </div>
             <div className="actions flex flex-col justify-center gap-4 ml-4 p-1">
             <button type="button" className="flex flex-col items-center">
-                <FiMessageSquare size={22} className="mb-1" stroke-width="1.5" />
+                <FiMessageSquare size={22} className="mb-1" strokeWidth="1.5" />
                 <span className="text-sm">123</span>
             </button>
             <button type="button" className="flex flex-col items-center">

@@ -2,8 +2,13 @@
 import Layout from '../../components/layouts/blog-layout'
 import styles from '../../styles/Home.module.css'
 import NewsCard from '../../components/news-card'
+import MoreStories from '../../components/post-more'
 
 export default function NotePage({ allPosts }) {
+
+  const morePosts = allPosts.slice(1)
+
+
   return (
     <Layout>
       <div className={styles.container}>
@@ -17,7 +22,11 @@ export default function NotePage({ allPosts }) {
                   </div>
                 ))}
           </section>  
-        </div>
+
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+
+
+      </div>
     </Layout>
   )
 }
@@ -26,7 +35,7 @@ export async function getStaticProps() {
   const response = await fetch(process.env.API);
   const res = await fetch(response.url + 'api/allposts/')
   const allPosts = await res.json()
-
+  console.log("Test")
   if (!allPosts) {
     return {
       notFound: true,
