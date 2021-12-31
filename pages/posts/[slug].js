@@ -105,6 +105,7 @@ export default function PostPage( { post, content } ) {
                   coverImage={post[0].Img}
                   date={post[0].Date}
                   author={post[0].Email}
+                  avatar={post[0].AvatarImg}
                 />
                 <PostBody content={content} />
               </article>
