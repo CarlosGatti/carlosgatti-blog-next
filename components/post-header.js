@@ -15,7 +15,7 @@ export default function PostHeader({ title, coverImage, date, author, avatar }) 
       </div>
       <div className="max-w-2xl mx-auto">
         <div className="block md:hidden mb-6">
-          <Avatar name={author} picture={avatar} />
+          <Avatar name={author} picture={"/gatti-foto.png"} />
         </div>
         <div className="mb-6 text-lg">
           <distanceToNow dateString={date} />

@@ -1,19 +1,16 @@
+import styles from '../styles/Home.module.css'
+import { FaSpotify } from 'react-icons/fa';
 import {  
   IoLogoInstagram,
   IoLogoLinkedin,
   IoLogoGithub
   } from "react-icons/io5";
-import styles from '../styles/Home.module.css'
-import { FaSpotify } from 'react-icons/fa';
 
 export default function Footer() {
 
   return (
     <div className={styles.footer}>
-
-      
       <div className="max-w-4xl m-auto px-4">
-
       <footer className="text-gray-600 body-font">
         <div
           className="
@@ -74,7 +71,6 @@ export default function Footer() {
                 The Blog
               </h2>
               <nav className="list-none mb-10">
-
               <li>
                   <a href="/blog" className="text-gray-600 hover:text-gray-800"
                     >About</a>
@@ -110,7 +106,6 @@ export default function Footer() {
                 </li>
               </nav>
             </div>
-    
           </div>
         </div>
         <div className="bg-white shadon">
@@ -126,7 +121,7 @@ export default function Footer() {
             "
           >
             <p className="text-gray-500 text-sm text-center sm:text-left">
-              © 2021 Copyright:
+              © 2022 Copyright:
               <a
                 href="https://www.carlosgatti.com/"
                 className="text-gray-600 ml-1"

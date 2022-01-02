@@ -22,10 +22,8 @@ import {
   FiPauseCircle
 } from "react-icons/fi";
 
-
 export default function PostPage( { post, content } ) {
   const router = useRouter()
-
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />
   }
@@ -34,8 +32,6 @@ export default function PostPage( { post, content } ) {
   const speechStart = (post) => {
     const lang = 'en-US'
     const voiceIndex = 2
-    console.log(post)
-    
     const speak = async text => {
       if (!speechSynthesis) {
         return
@@ -80,26 +76,20 @@ export default function PostPage( { post, content } ) {
     var synth = window.speechSynthesis;
     synth.pause();
     var amIPaused = synth.paused; 
-
     if(amIPaused == true){
       synth.speak();
     }
-
   };
   
   return (
     <Layout>
       <Container>
-        {/* <div className={styles.container}> */}
-
           <Header/>
           {router.isFallback ? (
             <PostTitle>Loading…</PostTitle>
           ) : (
-
             <div>
               <article className="mb-32">
-   
                 <PostHeader
                   title={post[0].Title}
                   coverImage={post[0].Img}
@@ -109,10 +99,7 @@ export default function PostPage( { post, content } ) {
                 />
                 <PostBody content={content} />
               </article>
-        
-
               <div className="max-w-4xl m-auto">
-       
                 <div className="player bg-gray-50 p-6 flex flex-col items-center rounded-md">
                   <div className="flex justify-center items-center h-24">
                     <h3 className="text-xl font-bold text-center">
@@ -143,19 +130,11 @@ export default function PostPage( { post, content } ) {
                 {/* <Comment /> */}
               </div>
           </div>
-
-          
           )}
-        {/* </div> */}
-
-
-
-
       </Container>
     </Layout>    
   )
 }
-
 
 export async function getStaticProps(context) {
   const id = context.params.slug;
@@ -186,7 +165,6 @@ export async function getStaticPaths() {
   const paths = posts.map((post) => ({
     params: { slug: post.Id.toString() },
   }))
-
   return { paths, fallback: false }
 }
 
