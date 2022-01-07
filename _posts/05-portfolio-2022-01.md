@@ -52,3 +52,8 @@
 ## ETFs
 
 - **SPDR S&P OIL & GAS EXPLOR & PRODUCT (XOP)** [Tradingview idea]()
+
+
+## TVC
+
+- **CFDs on Gold (GOLD)**
