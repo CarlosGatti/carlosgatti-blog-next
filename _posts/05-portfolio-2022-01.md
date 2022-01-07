@@ -1,14 +1,15 @@
 # MY PERSONAL MARKET PORTFOLIO FOR 2022 / 1
 
-## Crypto
+## Cryptos
 
-- **Ethereum (ETH) : Mining**
-- **Bitcoin (BTC)**
-
+- **Ethereum (ETH) : Mining**  [Tradingview idea](https://www.tradingview.com/chart/ETHUSD/5urYIxSb-ETHUSD-D-Prediction-Bullish-to-ETH-2-0/)
+![image info](https://www.tradingview.com/i/5urYIxSb/)
+- **Bitcoin (BTC)** [Tradingview idea](https://www.tradingview.com/chart/BTCUSD/FIdUwc0E-BTCUSD-D-Great-deal-at-price-rounding-70K/)
+![image info](https://www.tradingview.com/i/FIdUwc0E/)
 
 ## Energy
 
-- **Cameco Corporation. (CCJ)** [Tradingview idea]() 
+- **Cameco Corporation. (CCJ)**
 
 
 
