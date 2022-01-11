@@ -20,7 +20,8 @@
 - **Nvidia (NVDA)**  [Tradingview idea]()  
 - **Alibaba (BABA)** 
 - **Google (GOOG)**
-- **Facebook (FB)**
+- **Facebook (FB)** [Tradingview idea](https://www.tradingview.com/chart/FB/RGNX4UVR-FB-Meta-D-All-in-strong-fundamentals/)
+![image info](https://www.tradingview.com/i/RGNX4UVR/)
 - **Infosys (INFY)** [Tradingview idea]()  
 - **Ayro (AYRO)** [Tradingview idea]()  
 
@@ -28,7 +29,8 @@
 ## Motor Vehicles
 
 - **Ford Motor (F)** 
-- **Tesla (TSLA)**
+- **Tesla (TSLA)** [Tradingview idea](https://www.tradingview.com/chart/TSLA/lPeqMMiE-TSLA-D-Tesla-Is-a-Goldman-Sachs-Top-Pick-for-2022/)
+![image info](https://www.tradingview.com/i/lPeqMMiE/)
 
 
 
