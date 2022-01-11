@@ -1,10 +1,8 @@
 
 import Layout from '../../components/layouts/blog-layout'
 import Container from '../../components/container'
-import styles from '../../styles/Home.module.css'
 import NewsCard from '../../components/news-card'
 import MoreStories from '../../components/post-more'
-import markdownToHtml from '../../lib/markdownToHtml'
 import Header from '../../components/header'
 
 function Blog({ latestPosts }) {
@@ -14,11 +12,11 @@ function Blog({ latestPosts }) {
     <Layout>
       <Container>
         <Header/>
-        <div className={styles.container}>
+
           <div  className="my-6">
             <h1 className="text-2xl font-bold">Last things:</h1>
           </div>
-            <section>
+            <section  class="flex flex-wrap gap-4">
                   {latestPosts.map((item) => (
                     <div key={item.Id}>
                       <NewsCard data={item} />
@@ -28,7 +26,6 @@ function Blog({ latestPosts }) {
 
             {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
 
-          </div>
         </Container>
     </Layout>
     </> 
