@@ -16,7 +16,7 @@ function Blog({ latestPosts }) {
           <div  className="my-6">
             <h1 className="text-2xl font-bold">Last things:</h1>
           </div>
-            <section  class="flex flex-wrap gap-4">
+            <section  class="flex flex-wrap gap-5">
                   {latestPosts.map((item) => (
                     <div key={item.Id}>
                       <NewsCard data={item} />
