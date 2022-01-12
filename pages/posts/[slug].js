@@ -144,11 +144,9 @@ export async function getStaticProps(context) {
   const response = await fetch(process.env.API);
   const res = await fetch(response.url + 'api/post/' + id)
   const post = await res.json()
-
   const content = await markdownToHtml(post[0].Text || '')
   // Pass post data to the page via props
 
-  console.log("Mark", content)
   return { 
     props: { post,
              content

@@ -2,8 +2,8 @@
 import Layout from '../../components/layouts/blog-layout'
 import Container from '../../components/container'
 import NewsCard from '../../components/news-card'
-import MoreStories from '../../components/post-more'
 import Header from '../../components/header'
+import markdownToHtml from '../../lib/markdownToHtml'
 
 function Blog({ latestPosts }) {
 
@@ -39,13 +39,19 @@ export async function getStaticProps() {
   const res = await fetch(response.url + 'api/latestposts/')
   const latestPosts = await res.json()
 
+  var x = 0 
+
+  for (;x < latestPosts.length; x++) {
+    latestPosts[x].Content = await markdownToHtml(latestPosts[x].Text || '')
+  }
+
   if (!latestPosts) {
     return {
       notFound: true,
     }
   }
   return {
-    props: { latestPosts }, // will be passed to the page component as props
+    props: { latestPosts}, // will be passed to the page component as props
   }
 }
 
