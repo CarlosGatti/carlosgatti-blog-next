@@ -15,13 +15,18 @@
 
 ## Tecnology
 
-- **Microsoft (MSFT)** 
+- **Microsoft (MSFT)** [Tradinview idea](https://www.tradingview.com/chart/MSFT/QTWa7tWj-MSFT-D-Microsoft-MSFT-Up-54-YTD/)
+![image info](https://www.tradingview.com/i/QTWa7tWj/)
+
 - **Apple (AAPL)** 
 - **Nvidia (NVDA)**  [Tradingview idea]()  
 - **Alibaba (BABA)** 
-- **Google (GOOG)**
+- **Google (GOOG)** [Tradingview idea](https://www.tradingview.com/chart/GOOGL/zZNywHnP-GOOGL-D-Google-Stock-Forecast-2022-at-30/)
+![image info](https://www.tradingview.com/i/zZNywHnP/)
+
 - **Facebook (FB)** [Tradingview idea](https://www.tradingview.com/chart/FB/RGNX4UVR-FB-Meta-D-All-in-strong-fundamentals/)
 ![image info](https://www.tradingview.com/i/RGNX4UVR/)
+
 - **Infosys (INFY)** [Tradingview idea]()  
 - **Ayro (AYRO)** [Tradingview idea]()  
 
