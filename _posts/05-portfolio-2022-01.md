@@ -1,4 +1,5 @@
 # MY PERSONAL MARKET PORTFOLIO FOR 2022 / 1
+It is not meant to be a recommendation to buy or to sell stocks nor an offer to buy or sell stocks. 
 
 ## Cryptos
 
@@ -9,7 +10,8 @@
 
 ## Energy
 
-- **Cameco Corporation. (CCJ)**
+- **Cameco Corporation. (CCJ)** [Tradingview idea](https://www.tradingview.com/chart/CCJ/pD2yloRh-CCJ-D-Cameco-Analyst-s-Opinion/)
+![image info](https://www.tradingview.com/i/pD2yloRh/)
 
 
 
