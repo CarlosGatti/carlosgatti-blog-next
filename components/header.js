@@ -11,9 +11,11 @@ function Header() {
   return (
     <header className="text-2xl md:text-4xl font-bold">
       <div className={styles.header}>
-      <div className={styles.header__wrapper}>
+      
+      {/* <div className={styles.header__wrapper}>
           <img src="/gatti-foto.png" alt="gatti-foto" className={styles.gattismall} />
-      </div>
+      </div> */}
+      
         <nav className={styles.nav}> 
           {menu.map((item, index) => {
             return (

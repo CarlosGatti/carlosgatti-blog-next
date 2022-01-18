@@ -2,8 +2,9 @@
 import Layout from '../../components/layouts/blog-layout'
 import Container from '../../components/container'
 import NewsCard from '../../components/news-card'
-import Header from '../../components/header'
+import Header from '../../components/header-blog'
 import markdownToHtml from '../../lib/markdownToHtml'
+import styles from '../../styles/Blog.module.css'
 
 function Blog({ latestPosts }) {
 
@@ -12,11 +13,11 @@ function Blog({ latestPosts }) {
     <Layout>
       <Container>
         <Header/>
-
           <div  className="my-6">
-            <h1 className="text-2xl font-bold">Last things:</h1>
+            <h1 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">Last things:</h1>
           </div>
-            <section  class="flex flex-wrap gap-5">
+  
+            <section  className={styles.container_card}>
                   {latestPosts.map((item) => (
                     <div key={item.Id}>
                       <NewsCard data={item} />
@@ -32,7 +33,6 @@ function Blog({ latestPosts }) {
   )
 }
 export default Blog
-
 
 export async function getStaticProps() {
   const response = await fetch(process.env.API);

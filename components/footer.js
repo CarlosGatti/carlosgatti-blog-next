@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css'
 import { FaSpotify } from 'react-icons/fa';
 import {  
   IoLogoInstagram,
@@ -9,7 +8,7 @@ import {
 export default function Footer() {
 
   return (
-    <div className={styles.footer}>
+    <div>
       <div className="max-w-4xl m-auto px-4">
       <footer className="text-gray-600 body-font">
         <div
