@@ -11,5 +11,7 @@ As games and cryptocurrency further combine, creating new gameplay aspects that 
 ## Snoop Dogg is developing a Snoopverse, and someone just bought a property in his virtual world for almost $500,000 [read more](https://fortune.com/2021/12/09/snoop-dogg-rapper-metaverse-snoopverse/)
 
 
+
+
 ## List
  - [SANDBOX](https://www.sandbox.game/)
