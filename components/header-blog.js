@@ -1,13 +1,31 @@
 import Link from 'next/link'
 
 export default function Header() {
+
+  const menu = [
+    { title: 'Home', path: '/' },
+  ]
+
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/">
-        <a className="hover:underline">Blog</a>
-      </Link>
-      .
-    </h2>
+
+      <nav> 
+          {menu.map((item, index) => {
+            return (
+              <Link key={index} href={item.path}>
+                <h2 className="inline-flex text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-15 mt-8 mr-5 cursor-pointer"
+                >
+                  {item.title}
+                </h2>
+              </Link>
+            )
+          })}
+        </nav>
+
+
+
+
+
+
   )
 }
 

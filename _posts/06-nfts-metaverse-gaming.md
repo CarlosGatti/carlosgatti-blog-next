@@ -8,10 +8,12 @@ NFT games have taken the world by storm in mid-2021, with Axie Infinity nearing 
 
 As games and cryptocurrency further combine, creating new gameplay aspects that reward players with digital assets, here’s a look at some of the upcoming NFT games for 2022 and beyond.
 
-## Snoop Dogg is developing a Snoopverse, and someone just bought a property in his virtual world for almost $500,000 [read more](https://fortune.com/2021/12/09/snoop-dogg-rapper-metaverse-snoopverse/)
+Snoop Dogg is developing a Snoopverse, and someone just bought a property in his virtual world for almost $500,000 [read more](https://fortune.com/2021/12/09/snoop-dogg-rapper-metaverse-snoopverse/)
 
 
+### Current price of one SAND ($3.97)
+
+![image info](https://www.tradingview.com/x/Fkq1I93I/)
 
 
-## List
- - [SANDBOX](https://www.sandbox.game/)
+ - [SANDBOX WEBSITE](https://www.sandbox.game/)
