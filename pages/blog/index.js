@@ -7,6 +7,7 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import styles from '../../styles/Blog.module.css'
 import Intro from '../../components/intro'
 import IntroTelegram from '../../components/intro-telegram'
+import Newsletter from '../../components/newsletter'
 function Blog({ latestPosts }) {
 
   return (
@@ -24,7 +25,7 @@ function Blog({ latestPosts }) {
                     </div>
                   ))}
             </section> 
-
+                    <Newsletter/>
             {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
 
         </Container>
