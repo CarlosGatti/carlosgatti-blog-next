@@ -3,7 +3,7 @@ import CoverImage from '../components/cover-image'
 import markdownStyles from '../styles/markdown-styles.module.css'
 
 export default function NewsCard({data}) {
-
+    
     return (
 
       <div>

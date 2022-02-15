@@ -7,10 +7,11 @@ import markdownToHtml from '../../lib/markdownToHtml'
 import styles from '../../styles/Blog.module.css'
 import Intro from '../../components/intro'
 import IntroTelegram from '../../components/intro-telegram'
-import Newsletter from '../../components/newsletter'
-function Blog({ latestPosts }) {
+
+function Blog({ latestPosts, responseAPI }) {
 
   return (
+
     <>
     <Layout>
       <Container>
@@ -25,7 +26,6 @@ function Blog({ latestPosts }) {
                     </div>
                   ))}
             </section> 
-                    <Newsletter/>
             {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
 
         </Container>
@@ -36,8 +36,7 @@ function Blog({ latestPosts }) {
 export default Blog
 
 export async function getStaticProps() {
-  const response = await fetch(process.env.API);
-  const res = await fetch(response.url + 'api/latestposts/')
+  const res = await fetch(`${process.env.API}/api/latestposts/`)
   const latestPosts = await res.json()
 
   var x = 0 
@@ -52,7 +51,7 @@ export async function getStaticProps() {
     }
   }
   return {
-    props: { latestPosts}, // will be passed to the page component as props
+    props: { latestPosts }, // will be passed to the page component as props
   }
 }
 
