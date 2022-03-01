@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import ThemeToggle from '../components/theme-toogle'
 
 function HomePage() {
+      
   return (
     <>
     <Layout>
@@ -19,7 +20,7 @@ function HomePage() {
                 <ThemeToggle/>
               </div>
               <div className={styles.grid}>
-                  <a href="https://www.linkedin.com/in/carlos-gatti-693b909b/" className={styles.card}>
+                  <a href="/resume" className={styles.card}>
                       <h3 animate-ping>Experiance</h3>
                       <p>If you are a recruiter, I have something especially reserved for you.</p>
                   </a>
