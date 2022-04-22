@@ -22,7 +22,7 @@ export default function ContactForm() {
              
                     <div class="p-2 w-full pt-8 mt-8 text-center">
                     <a class="text-gray-500">carlos@carlosgatti.com</a>
-                    <a class="text-gray-500" type='phone'>phone: +1(857)350-7504</a>
+                    <a class="text-gray-500" type='phone'>+1(857)350-7504</a>
                     <p class="leading-normal my-5 border-t border-gray-200 ">
                         You can find me in the links below
                     </p>
