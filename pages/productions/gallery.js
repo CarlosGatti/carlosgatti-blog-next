@@ -27,18 +27,18 @@ function GalleryImg() {
   const photos = [
     {
       src: '../gallery-douglas1.jpg',   
-      width: 3,
-      height: 4
+      width: 1,
+      height: 2
     },
     {
       src: '../gallery-ny1-bw.jpg',   
-      width: 3,
-      height: 4
+      width: 1,
+      height: 2
     },
     {
       src: '../gallery-ny3.jpg',   
-      width: 3,
-      height: 4
+      width: 1,
+      height: 2
     },
  
   ];

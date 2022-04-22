@@ -24,6 +24,10 @@ function HomePage() {
                       <h3 animate-ping>Experiance</h3>
                       <p>If you are a recruiter, I have something especially reserved for you.</p>
                   </a>
+                  <a href="/productions" className={styles.card}>
+                      <h3>Photography</h3>
+                      <p>I can transform your best moment into something unforgettable.</p>
+                  </a>
                   <a href="/blog/" className={styles.card}>
                       <h3>My Blog</h3>
                       <p>This blog was developed with the aim of structuring some themes that I routinely need to share.</p>
@@ -32,10 +36,7 @@ function HomePage() {
                       <h3>GitHub</h3>
                       <p>Some of the repositories that I participated or created.</p>
                   </a>
-                  <a href="https://www.amazon.com/hz/wishlist/ls/2TLSRSMJK0O6M?ref_=wl_share" className={styles.card}>
-                      <h3>Amazon</h3>
-                      <p>My personal references for books, courses and products.</p>
-                  </a>
+
               </div>
           </main>
       </div>
