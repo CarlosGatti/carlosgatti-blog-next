@@ -67,11 +67,7 @@ function Productions() {
                       </svg>
                     </span>External photos
                   </p>
-                  <button class="flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Apply
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
+
                   <p class="text-xs text-gray-500 mt-3">All files will be in digital format.</p>
                 
                 
@@ -113,11 +109,7 @@ function Productions() {
                       </svg>
                     </span>1 video of 2 minutes for social media
                   </p>
-                  <button class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Apply
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
+        
                   <p class="text-xs text-gray-500 mt-3">All files will be in digital format.</p>
                 </div>
               </div>
@@ -162,11 +154,7 @@ function Productions() {
                       </svg>
                     </span>Drone video
                   </p>
-                  <button class="flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Apply
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
+       
                   <p class="text-xs text-gray-500 mt-3">All files will be in digital format.</p>
                 </div>
               </div>
@@ -212,11 +200,7 @@ function Productions() {
                       </svg>
                     </span>Drone video
                   </p>
-                  <button class="flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none hover:bg-gray-500 rounded">Apply
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </button>
+               
                   <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
                 </div>
               </div>

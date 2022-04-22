@@ -18,6 +18,7 @@ export default function Header() {
                      <span class="ml-3 text-xl">Gatti Productions</span>
                 </a>
                 <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900" href='/'>Home</a>
                 <a class="mr-5 hover:text-gray-900" href='#Gallery'>My Gallery</a>
                 <a class="mr-5 hover:text-gray-900" href="#Investing">Investing</a>
                 <a class="mr-5 hover:text-gray-900" href="#Contact">Contact</a>
